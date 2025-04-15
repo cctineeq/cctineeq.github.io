@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+h1 {
+    text-align: center;
+}
+
+.abc {
+    text-shadow: 5px 6px 7px orange; 
+}
+
+.efg {
+    text-shadow: 5px 6px 7px gray, 10px 11px 5px silver;
+}
