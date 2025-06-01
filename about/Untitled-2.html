@@ -113,6 +113,47 @@
         .next-page-button:hover {
             background-color: #f67280;
         }
+        
+        /* 🌸 側邊選單樣式 */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #ff99cc;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f67280;
+        }
+
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            background-color: #ff99cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 1100;
+        }
 
     </style>
 </head>
@@ -121,7 +162,18 @@
     <header>
         <h1>認識阿龜</h1>
     </header>
+    
+      <!-- 🌸 隱藏式選單按鈕 -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
 
+    <!-- 🌸 隱藏式選單內容 -->
+    <div id="mySidebar" class="sidebar">
+        <a href="https://cctineeq.github.io/index.htm">首頁</a>
+        <a href="#">認識阿龜</a>
+        <a href="#">阿龜日記</a>
+        <a href="#">阿龜照片</a>
+    </div>
+    
     <div class="content">
         <h2>阿龜的小檔案</h2>
         <ul class="info-list">
@@ -143,5 +195,16 @@
         <a herf="#" class="next-page-button">下一頁</a>
     </div>
 
+     <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width === "200px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "200px";
+            }
+        }
+    </script>
+    
 </body>
 </html>
