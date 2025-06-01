@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>阿龜的日記牆</title>
+    <style>
+        body {
+            font-family: "微軟正黑體", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f6;
+            color: #5c4033;
+        }
+
+        header {
+            background-color: #ff99cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            border: 4px solid #ff99cc;
+            box-shadow: 0 4px 8px rgba(255, 153, 204, 0.3);
+        }
+
+        h2 {
+            color: #ff66b2;
+            font-size: 1.8em;
+            border-bottom: 2px dashed #ff99cc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 日記項目 */
+        .diary-entry {
+            background-color: #ffe6f2;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(255, 153, 204, 0.2);
+        }
+
+        .diary-date {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #d6336c;
+            margin-bottom: 10px;
+        }
+
+        .diary-photo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .diary-photo img {
+            max-width: 100%;
+            max-height: 250px;
+            border-radius: 12px;
+            border: 3px solid #ff99cc;
+            box-shadow: 0 2px 6px rgba(255, 153, 204, 0.3);
+        }
+
+        .diary-text {
+            font-size: 1.15em;
+            line-height: 1.5;
+            color: #5c4033;
+        }
+
+        /* 按鈕 */
+        a.back-link,
+        a.next-page-button {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #ff99cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(255, 153, 204, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        a.back-link:hover,
+        a.next-page-button:hover {
+            background-color: #f67280;
+        }
+
+        a.next-page-button {
+            float: right;
+        }
+
+        /* 側邊選單 */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #ff99cc;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f67280;
+        }
+
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            background-color: #ff99cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+        .read-more {
+            color: #ff99cc;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .read-more:hover {
+            color: #f67280;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>阿龜的日記牆</h1>
+</header>
+
+  <!-- 🌸 隱藏式選單按鈕 -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+ <!-- 🌸 隱藏式選單內容 -->
+    <div id="mySidebar" class="sidebar">
+        <a href="https://cctineeq.github.io/index.htm">首頁</a>
+        <a href="https://cctineeq.github.io/about/Untitled-2.html">關於阿龜</a>
+        <a href="https://cctineeq.github.io/about/Niu/Untitled-3.html">關於妞妞</a>
+        <a href="https://cctineeq.github.io/diary/Untitled-4.html">出遊日記</a>
+        <a href="#">日常點滴</a>
+    </div>
+
+<div class="content">
+    <h2>日常點滴</h2>
+
+    <div class="diary-entry">
+        
+        <h2><div class="diary-text">
+            覓食😋
+        </div></h2>
+            <a href="diary2025-05-03.html" class="read-more">閱讀更多 →</a>
+    </div>
+
+    <div class="diary-entry">
+        <h2><div class="diary-text">
+           睡覺💤
+        </div></h2>
+        <a href="diary2025-03-09.html" class="read-more">閱讀更多 →</a>
+    </div>
+
+    <div class="diary-entry">
+        <h2><div class="diary-text">
+           趴趴走🐾
+        </div></h2>
+        <a href="diary2025-02-22.html" class="read-more">閱讀更多 →</a>
+    </div>
+
+    <div class="diary-entry">
+        <h2><div class="diary-text">
+          大便💩
+        </div></h2>
+        <a href="diary2025-02-15.html" class="read-more">閱讀更多 →</a>
+    </div>
+
+    <a class="back-link" href="https://cctineeq.github.io/diary/Untitled-4.html">上一頁</a>
+    <a href="https://cctineeq.github.io/index.htm" class="next-page-button">回首頁</a>
+</div>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("mySidebar");
+        if (sidebar.style.width === "200px") {
+            sidebar.style.width = "0";
+        } else {
+            sidebar.style.width = "200px";
+        }
+    }
+</script>
+
+</body>
+</html>
